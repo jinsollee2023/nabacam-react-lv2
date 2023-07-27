@@ -6,7 +6,10 @@
 </br>
 
 ## 프로젝트 소개
-<img width="903" alt="스크린샷 2023-06-16 오전 9 17 21" src="https://github.com/jinsollee2023/react-todo/assets/130551771/673f194b-eea0-427f-9b70-65fce7455c02">
+<img width="819" alt="스크린샷 2023-07-27 오후 5 40 27" src="https://github.com/jinsollee2023/nabacam-react-lv2/assets/130551771/d33c1f03-9ea5-41b7-9117-f69a38968a55">
+
+<img width="1079" alt="스크린샷 2023-07-27 오후 5 40 36" src="https://github.com/jinsollee2023/nabacam-react-lv2/assets/130551771/4c1a1911-e17d-48f8-9c02-4d34da191bd3">
+
 </br></br>
 
 - 새로운 투두리스트를 추가하고 완료,취소 상태를 변경하고 삭제가 가능함
