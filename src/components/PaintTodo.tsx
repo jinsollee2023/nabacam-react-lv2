@@ -3,17 +3,22 @@ import { deleteTodo, updateTodo } from "../redux/modules/todoReducer";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import S from "../globalStyle";
+import { Todo } from "../types";
 
-const PaintTodo = ({ todo }) => {
+interface Props {
+  todo: Todo;
+}
+
+const PaintTodo = ({ todo }: Props) => {
   const dispatch = useDispatch();
 
   // 삭제하기
-  const deleteBtnHandler = (id) => {
+  const deleteBtnHandler = (id: string) => {
     dispatch(deleteTodo(id));
   };
 
   // 완료/취소하기
-  const toggleBtnHandler = (id) => {
+  const toggleBtnHandler = (id: string) => {
     dispatch(updateTodo(id));
   };
 

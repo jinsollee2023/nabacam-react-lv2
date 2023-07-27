@@ -3,9 +3,11 @@ import AddTodo from "../components/AddTodo";
 import PaintTodo from "../components/PaintTodo";
 import { useSelector } from "react-redux";
 import S from "../globalStyle";
+import { Todo } from "../types";
+import { RootState } from "../redux/configStore";
 
 const Home = () => {
-  const { todos } = useSelector((state) => {
+  const { todos } = useSelector((state: RootState) => {
     return state.todoReducer;
   });
   return (
@@ -19,8 +21,8 @@ const Home = () => {
         <S.PaintDivH1>Working🔥</S.PaintDivH1>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {todos
-            .filter((todo) => !todo.isDone)
-            .map((todo) => {
+            .filter((todo: Todo) => !todo.isDone)
+            .map((todo: Todo) => {
               return <PaintTodo todo={todo} />;
             })}
         </div>
@@ -29,8 +31,8 @@ const Home = () => {
         <S.PaintDivH1>Done🎉</S.PaintDivH1>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {todos
-            .filter((todo) => todo.isDone)
-            .map((todo) => {
+            .filter((todo: Todo) => todo.isDone)
+            .map((todo: Todo) => {
               return <PaintTodo todo={todo} />;
             })}
         </div>

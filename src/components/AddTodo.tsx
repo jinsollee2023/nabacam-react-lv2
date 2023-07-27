@@ -5,13 +5,13 @@ import { addTodo } from "../redux/modules/todoReducer";
 import S from "../globalStyle";
 
 const AddTodo = () => {
-  const [title, setTitle] = useState();
-  const [content, setContent] = useState();
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
   const dispatch = useDispatch();
 
   // 추가하기
-  const addBtnHandler = (event) => {
+  const addBtnHandler = (event: { preventDefault: () => void }) => {
     event.preventDefault();
     const addedtodo = {
       id: nanoid(),

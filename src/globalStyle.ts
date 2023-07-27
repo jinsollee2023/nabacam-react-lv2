@@ -1,4 +1,16 @@
-import { styled } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+body{
+  max-width: 1200px;
+  min-width: 800px;
+  margin: 0 auto;
+}
+`;
+
+interface ToggleBtnProps {
+  borderColor?: string;
+}
 
 const S = {
   Header: styled.div`
@@ -75,7 +87,7 @@ const S = {
     margin-top: 20px;
   `,
 
-  ToggleBtn: styled.button`
+  ToggleBtn: styled.button<ToggleBtnProps>`
     border: 2px solid ${(props) => props.borderColor};
     background-color: transparent;
     width: 80px;
